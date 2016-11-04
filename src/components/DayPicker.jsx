@@ -155,13 +155,13 @@ export default class DayPicker extends React.Component {
     });
   }
 
-  getMonthHeightByIndex(i) {
+  getMonthHeightByIndex /* istanbul ignore next */ (i) {
     return this.getMonthHeight(
       ReactDOM.findDOMNode(this.refs.transitionContainer).querySelectorAll('.CalendarMonth')[i]
     );
   }
 
-  getMonthHeight(el) {
+  getMonthHeight /* istanbul ignore next */ (el) {
     const caption = el.querySelector('.js-CalendarMonth__caption');
     const grid = el.querySelector('.js-CalendarMonth__grid');
 
@@ -173,7 +173,7 @@ export default class DayPicker extends React.Component {
     );
   }
 
-  applyTransformStyles(el, transform, opacity = '') {
+  applyTransformStyles /* istanbul ignore next */ (el, transform, opacity = '') {
     const transformStyles = getTransformStyles(transform);
     transformStyles.opacity = opacity;
 
@@ -183,7 +183,7 @@ export default class DayPicker extends React.Component {
     });
   }
 
-  calculateDimension(el, axis, borderBox = false, withMargin = false) {
+  calculateDimension /* istanbul ignore next */  (el, axis, borderBox = false, withMargin = false) {
     if (!el) {
       return 0;
     }
